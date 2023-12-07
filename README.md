@@ -268,7 +268,7 @@ cd ~
 mkdir hcxtools
 
 # install the required dependencies
-sudo touch /root/.pwnagotchi-auto
+touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi
 wget -q -O - https://archive.kali.org/archive-key.asc | sudo apt-key add
 sudo apt-get update --allow-releaseinfo-change
 apt-get install libcurl4-openssl-dev libssl-dev zlib1g-dev
