@@ -514,6 +514,20 @@ update it with this:
 - paw-gps.py 1.0.1
 <https://github.com/evilsocket/pwnagotchi/pull/1054>
 
+## Update Screen Settings
+sudo nano /usr/local/lib/python3.9/dist-packages/pwnagotchi/ui/view.py
+If you want a black background, white text:
+```python
+WHITE = 0x00
+BLACK = 0xff
+```
+
+If you want a white background, black text:
+```python
+WHITE = 0xff
+BLACK = 0x00
+```
+
 ## 14 known bugs
 
 - bettercap not showing any signals
