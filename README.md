@@ -12,7 +12,7 @@ However, the normal installation guide from [the official website](https://pwnag
 The specific hardware I myself have been using for my build is this:
 
 - Raspberry Pi Zero WH (RP0W)
-- Waveshare 2.13 V4 ([amazon](https://www.amazon.com/dp/B07P9T64BK)
+- Waveshare 2.13 V4 ([amazon](https://www.amazon.com/dp/B07P9T64BK))
 - PiSugar 2 (2 LED-version)
 - Samsung Evo 32GB micro SD
 
