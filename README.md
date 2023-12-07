@@ -268,6 +268,8 @@ cd ~
 mkdir hcxtools
 
 # install the required dependencies
+wget -q -O - https://archive.kali.org/archive-key.asc | sudo apt-key add
+sudo apt-get update --allow-releaseinfo-change
 apt-get install libcurl4-openssl-dev libssl-dev zlib1g-dev
 ```
 
@@ -276,7 +278,7 @@ pay attention to sudo rm -r hcxtools before, in case you tried to build the unsu
 ```bash
 cd hcxtools
 wget https://github.com/ZerBea/hcxtools/archive/refs/tags/6.2.7.zip
-unzip 6.2.7.zip
+unzip -d ~/hcxtools 6.2.7.zip
 ```
 
 - [ ] find out how to unzip all files in place instead of creating the 6.2.7 subfolder
