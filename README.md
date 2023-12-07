@@ -25,7 +25,7 @@ Not every section from the original guide has been used in this document, the om
 ### 1.1 Download
 
 - [balena etcher](https://www.balena.io/etcher/)
-- [pwnagotchi v1.5.5](https://github.com/evilsocket/pwnagotchi/releases/tag/v1.5.5)
+- [pwnagotchi-Torch v2.5.4](https://github.com/jayofelony/pwnagotchi-torch/releases/download/v2.5.4/pwnagotchi-rpi-bullseye-2.5.4-armhf.img.xz)
 
 ### 1.2 write the image to a micro sd card with balena etcher
 
