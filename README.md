@@ -3,7 +3,7 @@ Updated version of panoptyks 2022 guerilla guide
 
 ## Preface
 
-This work is based on the **guerrila guide to installing pwnagotchi [1.5.5/2022]**. For reference see [this reddit post](https://www.reddit.com/r/pwnagotchi/comments/sl2rv1/guerrilla_guide_to_pwnagotchi_v1552022/) and [pastebin](https://pastebin.com/8a3Rbyx6) of [panoptyk](https://www.reddit.com/user/panoptyk/).
+This work is based on the **guerrila guide to installing pwnagotchi [v2.5.4]**. For reference see [this reddit post](https://www.reddit.com/r/pwnagotchi/comments/sl2rv1/guerrilla_guide_to_pwnagotchi_v1552022/) and [pastebin](https://pastebin.com/8a3Rbyx6) of [panoptyk](https://www.reddit.com/user/panoptyk/).
 
 Since panoptyks original writeup some things have changed and I ran into several problems while setting up my pwnagotchi for the first time. Some bugs are still unresolved, see Section *known bugs*.
 
