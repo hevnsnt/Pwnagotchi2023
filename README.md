@@ -280,15 +280,9 @@ pay attention to sudo rm -r hcxtools before, in case you tried to build the unsu
 cd hcxtools
 wget https://github.com/ZerBea/hcxtools/archive/refs/tags/6.2.7.zip
 unzip -d ~/hcxtools 6.2.7.zip
-```
+rm 6.2.7.zip && cd hcxtools-6.2.7
+make && sudo make install
 
-- [ ] find out how to unzip all files in place instead of creating the 6.2.7 subfolder
-
-Connect via sftp to move the files to the hcxtools folder.
-
-```bash
-make
-sudo make install
 ```
 
 make takes a while (mine took over 30 min) but should build and install  successfully.
