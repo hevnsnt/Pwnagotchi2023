@@ -3,16 +3,16 @@ Updated version of panoptyks 2022 guerilla guide
 
 ## Preface
 
-This work is based on the **guerrila guide to installing pwnagotchi [v2.5.4]**. For reference see [this reddit post](https://www.reddit.com/r/pwnagotchi/comments/sl2rv1/guerrilla_guide_to_pwnagotchi_v1552022/) and [pastebin](https://pastebin.com/8a3Rbyx6) of [panoptyk](https://www.reddit.com/user/panoptyk/).
+This work is based on the **guerrila guide to installing pwnagotchi **. For reference see [this reddit post](https://www.reddit.com/r/pwnagotchi/comments/sl2rv1/guerrilla_guide_to_pwnagotchi_v1552022/) and [pastebin](https://pastebin.com/8a3Rbyx6) of [panoptyk](https://www.reddit.com/user/panoptyk/).
 
-Since panoptyks original writeup some things have changed and I ran into several problems while setting up my pwnagotchi for the first time. Some bugs are still unresolved, see Section *known bugs*.
+Even the *new* writeup seems very incomplete, and with the WaveShare V4 is currently shipping, these are all the steps that it took to get mine working correctly. I am sharing this information hopefully to help the next person in getting it setup, as it seems like the Pwnagotchi is a good introduction into Computer/Wifi Security. Some bugs are still unresolved, see Section *known bugs*.
 
 However, the normal installation guide from [the official website](https://pwnagotchi.ai) is still valid by and large, so this document will mostly provide details regarding deviations/addons to the standard installation procedure.
 
 The specific hardware I myself have been using for my build is this:
 
-- Raspberry Pi Zero WH (RP0W)
-- Waveshare 2.13 V4 ([amazon](https://www.amazon.com/dp/B07P9T64BK))
+- Raspberry Pi Zero WH (RP0W) ([amazon](https://amzn.to/46QL64q))
+- Waveshare 2.13 V4 ([amazon](https://www.amazon.to/3sYNtEJ))
 - PiSugar 2 (2 LED-version)
 - Samsung Evo 32GB micro SD
 
