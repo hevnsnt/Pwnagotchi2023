@@ -13,10 +13,10 @@ The specific hardware I myself have been using for my build is this:
 
 - Raspberry Pi Zero WH (RP0W) ([amazon](https://amzn.to/46QL64q))
 - Waveshare 2.13 V4 ([amazon](https://www.amazon.to/3sYNtEJ))
-- PiSugar 2 (2 LED-version)
-- Samsung Evo 32GB micro SD
+- PiSugar 2 (2 LED-version) ([amazon](https://amzn.to/3uL4fHP))
+- Samsung Evo 32GB micro SD  ([amazon](https://amzn.to/41f9sUg))
 
-I will do my best to reference and credit every source, please add sources where missing and/or drop me a hint. Majority of this document has been created in 2023-04, things are moving fast and surely another year later there will be other stuff broken, and other fixes available.
+I will do my best to reference and credit every source, please add sources where missing and/or drop me a hint. Majority of this document has been created in 2023-12, things are moving fast and surely another year later there will be other stuff broken, and other fixes available.
 
 Not every section from the original guide has been used in this document, the omitted text can be found in the file *original_notes*.
 
@@ -26,6 +26,8 @@ Not every section from the original guide has been used in this document, the om
 
 - [balena etcher](https://www.balena.io/etcher/)
 - [pwnagotchi-Torch v2.5.4](https://github.com/jayofelony/pwnagotchi-torch/releases/download/v2.5.4/pwnagotchi-rpi-bullseye-2.5.4-armhf.img.xz)
+
+Alternate:
 - [pwnagotchi 1.5.5FIX](https://github.com/wpa-2/pwnagotchi/releases)
 
 ### 1.2 write the image to a micro sd card with balena etcher
@@ -44,7 +46,7 @@ Because I am running Windows 11 as a daily driver, this section will cover only 
 4. If Windows didn't install the RP0W as an "Ethernet Gadget", download the corresponding driver on [Windows Update](https://www.catalog.update.microsoft.com/Search.aspx?q=USB+RNDIS%20Gadget)
 5. Unpack the CAB
 6. In Device Manager select the COM-Device and update the driver with the one from the CAB
-7. make sure to check in Network Devices for the Interface and configure TCP/IP v4 to use 10.0.0.01 as its IP-address, 255.255.255.0 as Subnet and 10.0.0.1 as Gateway.
+7. make sure to check in Network Devices for the Interface and configure TCP/IP v4 to use 10.0.0.1 as its IP-address, 255.255.255.0 as Subnet and 10.0.0.1 as Gateway.
 
 ### 2.1 SSH-connection
 
@@ -131,8 +133,40 @@ Execute this in Powershell:
 ## 3 Upload initial config.toml
 
 1. Prepare your config.toml according to the official guide.
-2. connect through ftp and upload *your config.toml* to /etc/pwnagotchi/
-3. make directory /etc/pwnagotchi/custom-plugins for custom plugins to add to that directory later.
+```toml
+main.name = "pwnagotchi"
+main.lang = "en"
+main.whitelist = [
+  "EXAMPLE_NETWORK",
+  "ANOTHER_EXAMPLE_NETWORK",
+  "fo:od:ba:be:fo:od",
+  "fo:od:ba"
+]
+
+main.plugins.grid.enabled = true
+main.plugins.grid.report = true
+main.plugins.aircrackonly.enabled = true
+main.plugins.aircrackonly.face = "(>.<)"
+main.plugins.grid.exclude = [
+  "yourHomeWiFi"
+]
+
+ui.display.enabled = true
+ui.display.type = "waveshare_3"
+ui.display.color = "black"
+ui.fps = 1
+
+fs.memory.enabled = true
+fs.memory.mounts.log.enabled = true
+fs.memory.mounts.data.enabled = true
+
+main.plugins.plugin_name.enabled = true
+main.custom_plugins = "/etc/pwnagotchi/custom-plugins/"
+main.custom_plugin_repos = [ "https://github.com/evilsocket/pwnagotchi-plugins-contrib/archive/master.zip",]
+```
+  
+3. connect through ftp and upload *your config.toml* to /etc/pwnagotchi/
+4. make directory /etc/pwnagotchi/custom-plugins for custom plugins to add to that directory later.
 
 ## 4 Enable Bluetooth connection
 
